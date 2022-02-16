@@ -22,17 +22,21 @@ public class Main {
                     System.out.print("Harf sayısını belirliyorum: ");
                     number = scanner.nextInt();
                     new HangmanAI(number);
+                    scanner.close();
                 } else if (choice == 'i' || choice == 'I' || choice == 'İ') {
                     System.out.print("Harf sayısını giriniz: ");
                     number = scanner.nextInt();
                     new HangmanHuman(number);
+                    scanner.close();
                 } else if (choice == 'ç' || choice == 'Ç') {
+                    scanner.close();
                     break;
                 } else {
                     System.out.println("Lütfen ya (i) ya da (b) giriniz..");
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
+                scanner.close();
             }
         }
     }

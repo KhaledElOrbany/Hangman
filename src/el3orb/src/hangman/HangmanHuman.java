@@ -38,6 +38,8 @@ public class HangmanHuman implements IHangman {
 
         this.Init();
         this.Play();
+        keyScanner.close();
+        fileScanner.close();
     }
 
     // Data pre-processing method
