@@ -9,6 +9,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+        //TODO: aşk
         while (true) {
             int number = 0;
             String computerVsHuman = "";
@@ -22,12 +23,10 @@ public class Main {
                     System.out.print("Harf sayısını belirliyorum: ");
                     number = scanner.nextInt();
                     new HangmanAI(number);
-                    scanner.close();
                 } else if (choice == 'i' || choice == 'I' || choice == 'İ') {
                     System.out.print("Harf sayısını giriniz: ");
                     number = scanner.nextInt();
                     new HangmanHuman(number);
-                    scanner.close();
                 } else if (choice == 'ç' || choice == 'Ç') {
                     scanner.close();
                     break;
@@ -36,7 +35,6 @@ public class Main {
                 }
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
-                scanner.close();
             }
         }
     }
