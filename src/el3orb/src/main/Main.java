@@ -9,10 +9,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        //TODO: aşk
         while (true) {
             int number = 0;
-            String computerVsHuman = "";
+            String computerVsHuman;
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Lütfen kimin başlayacağını seçin (b: bilgisayar, i: insan, ç: çıkış) -> ");
@@ -28,7 +27,6 @@ public class Main {
                     number = scanner.nextInt();
                     new HangmanHuman(number);
                 } else if (choice == 'ç' || choice == 'Ç') {
-                    scanner.close();
                     break;
                 } else {
                     System.out.println("Lütfen ya (i) ya da (b) giriniz..");
