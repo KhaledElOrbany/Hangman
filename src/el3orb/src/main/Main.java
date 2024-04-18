@@ -14,25 +14,25 @@ public class Main {
             String computerVsHuman;
             Scanner scanner = new Scanner(System.in);
 
-            System.out.print("Lütfen kimin başlayacağını seçin (b: bilgisayar, i: insan, ç: çıkış) -> ");
+            System.out.print("Please select who will start (c: computer, h: human, e: exit) -> ");
             computerVsHuman = scanner.nextLine();
             char choice = computerVsHuman.charAt(0);
             try {
-                if (choice == 'b' || choice == 'B') {
-                    System.out.print("Harf sayısını belirliyorum: ");
+                if (choice == 'c' || choice == 'C') {
+                    System.out.print("I determine the number of letters: ");
                     number = scanner.nextInt();
                     new HangmanAI(number);
-                } else if (choice == 'i' || choice == 'I' || choice == 'İ') {
-                    System.out.print("Harf sayısını giriniz: ");
+                } else if (choice == 'h' || choice == 'H') {
+                    System.out.print("Enter the number of letters: ");
                     number = scanner.nextInt();
                     new HangmanHuman(number);
-                } else if (choice == 'ç' || choice == 'Ç') {
+                } else if (choice == 'e' || choice == 'E') {
                     break;
                 } else {
-                    System.out.println("Lütfen ya (i) ya da (b) giriniz..");
+                    System.out.println("Please enter either (c) or (h)..");
                 }
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
         }
     }
