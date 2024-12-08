@@ -1,10 +1,9 @@
 package el3orb.src.main;
 
+import java.util.Scanner;
+
 import el3orb.src.hangman.HangmanAI;
 import el3orb.src.hangman.HangmanHuman;
-
-import java.io.FileNotFoundException;
-import java.util.*;
 
 public class Main {
 
@@ -33,6 +32,8 @@ public class Main {
                 }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
+            } finally {
+                scanner.close();
             }
         }
     }

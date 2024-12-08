@@ -1,10 +1,15 @@
 package el3orb.src.hangman;
 
-import el3orb.src.Utils.Globals;
-
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+import el3orb.src.Utils.Globals;
+import el3orb.src.interfaces.IHangman;
 
 public class HangmanHuman implements IHangman {
     private final Scanner keyScanner, fileScanner;
